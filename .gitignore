@@ -1,0 +1,26 @@
+# .gitignore
+node_modules/
+dist/
+
+# 環境変数ファイル
+.env
+.env.local
+.env.*.local
+
+# ビルド出力
+*.js
+!jest.config.js
+
+# ログファイル
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# エディタ/IDE設定
+.vscode/
+.idea/
+
+# OS固有のファイル
+.DS_Store
+Thumbs.db
