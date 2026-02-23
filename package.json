@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tasks": "tsx src/scripts/inspect-tasks.ts",
-    "drepo": "tsx src/scripts/inspect-daily-report.ts"
+    "dnote": "tsx src/scripts/inspect-daily-note.ts"
   },
   "keywords": [],
   "author": "",
