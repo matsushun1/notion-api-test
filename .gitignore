@@ -1,6 +1,7 @@
 # .gitignore
 node_modules/
 dist/
+testdata
 
 # 環境変数ファイル
 .env
