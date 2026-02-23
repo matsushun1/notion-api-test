@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "inspect": "tsx scripts/inspect-notion-db.ts"
+    "tasks": "tsx src/scripts/inspect-tasks.ts",
+    "drepo": "tsx src/scripts/inspect-daily-report.ts"
   },
   "keywords": [],
   "author": "",
