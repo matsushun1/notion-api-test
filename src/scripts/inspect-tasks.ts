@@ -85,7 +85,13 @@ async function fetchBlocks(blockId: string, depth = 0): Promise<void> {
     const type = (block as Record<string, unknown>)[block.type]
     const richText = (type as { rich_text?: Array<{ plain_text: string }> })?.rich_text
     const text = richText?.map((t) => t.plain_text).join('') ?? ''
-    log(`${indent}[${block.type}] ${text}`)
+
+    let checkMark = ''
+    if (block.type === 'to_do') {
+      const checked = (type as { checked?: boolean })?.checked ?? false
+      checkMark = checked ? '[x] ' : '[ ] '
+    }
+    log(`${indent}[${block.type}] ${checkMark}${text}`)
 
     // 子ブロックがある場合は再帰的に取得
     if (block.has_children) {
