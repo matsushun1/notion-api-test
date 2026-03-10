@@ -49,7 +49,8 @@ async function inspectDailyNotes(): Promise<void> {
   const db = await notion.databases.retrieve({ database_id: databaseId })
   const dataSources = (db as unknown as { data_sources: Array<{ id: string; name: string }> }).data_sources
 
-    for (const dsRef of dataSources) {
+  for (const dsRef of dataSources) {
+    console.log('id: ', dsRef.id)
     const dataSource = await notion.dataSources.retrieve({ data_source_id: dsRef.id })
     if (!isFullDataSource(dataSource)) continue
 
